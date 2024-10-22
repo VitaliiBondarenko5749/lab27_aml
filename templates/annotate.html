@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Annotate Text</title>
+</head>
+<body>
+    <h1>Анотація тексту</h1>
+    <p>{{ text }}</p>
+    <form action="/submit_annotation" method="post">
+        <input type="hidden" name="index" value="{{ index }}">
+        <label for="sentiment">Тональність:</label>
+        <select name="sentiment">
+            <option value="1">Позитивна</option>
+            <option value="-1">Негативна</option>
+        </select>
+        <button type="submit">Зберегти анотацію</button>
+    </form>
+</body>
+</html>
